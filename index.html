@@ -17,9 +17,9 @@
         --clr-card: #ffffff;
         --clr-text: #333;
         --clr-muted: #5d5d5d;
-        --clr-accent: #528fd7;
+        --clr-accent: #ff768e;
         --clr-success: #00c48c;
-        --clr-shadow: rgba(0, 0, 0, 0.05);
+        --clr-shadow: #ff768e14;
       }
 
       * {
@@ -42,9 +42,11 @@
         font-size: clamp(1.5rem, 3vw, 2rem);
         text-transform: uppercase;
         font-weight: 800;
+        color: hsl(349.52deg 100% 73.09%);
       }
 
       .verse {
+        position: relative;
         text-align: center;
         font-size: clamp(0.9rem, 2vw, 1rem);
         color: var(--clr-muted);
@@ -57,6 +59,10 @@
 
       .verse strong {
         font-weight: 600;
+        position: absolute;
+        transform: translate(-50%, 50%);
+        margin-bottom: 2rem;
+        width: 100%;
       }
 
       .fruit-list {
@@ -64,7 +70,8 @@
         flex-direction: column;
         gap: 0.5rem;
         max-width: 700px;
-        margin: auto;
+        margin-inline: auto;
+        margin-top: 4rem;
       }
 
       .fruit-item {
@@ -81,7 +88,7 @@
       }
 
       .fruit-item.checked {
-        background: linear-gradient(to right, #c0eaff, #e0fff3);
+        background: linear-gradient(to right, #ffe0ed, #e9e1ff);
       }
 
       .fruit-info {
@@ -93,6 +100,7 @@
         font-size: 0.9em;
         margin-bottom: 0.5rem;
         text-transform: uppercase;
+        color: var(--clr-accent);
       }
 
       .fruit-desc {
